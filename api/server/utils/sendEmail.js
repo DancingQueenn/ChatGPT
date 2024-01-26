@@ -32,7 +32,6 @@ const sendEmail = async (email, subject, payload, template) => {
     } else {
       transporterOptions.host = process.env.EMAIL_HOST;
       transporterOptions.port = process.env.EMAIL_PORT ?? 25;
-	  transporterOptions.secure =true;
     }
 
     const transporter = nodemailer.createTransport(transporterOptions);
